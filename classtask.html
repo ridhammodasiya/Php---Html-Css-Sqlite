@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://demo.phlox.pro/travel/wp-content/uploads/sites/132/2020/05/header@2x.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header {
+            padding: 30px 30px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: black;
+            padding-left: 30px;
+            font-size: 22px;
+            text-transform: capitalize;
+        }
+
+        /* .pra{
+            width: 100%;
+            justify-content: center;
+            padding: 30px 0 30px 0;
+            display: flex;
+        }
+        .pra h5{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            color: aquamarine;
+           
+        } */
+        .popular {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0 30px 0;
+        }
+
+        .popular h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+        }
+
+        .china {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            border-radius: 20px;
+        }
+
+        .china img {
+            width: 46%;
+            border-radius: 20px;
+        }
+
+        .pra {
+            text-align: center;
+        }
+
+        .pra h5 {
+            font-size: 10vw;
+            text-transform: uppercase;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: white;
+        }
+
+        .chek {
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        .chek h6 {
+            text-transform: uppercase;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: xx-large;
+
+        }
+
+        .praposal {
+            justify-content: center;
+            width: 100%;
+            display: flex;
+            padding: 20px 0 30px 0;
+        }
+
+        .praposal h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            color: aqua;
+        }
+
+        .cont {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .lain {
+            width: 100%;
+            /* display: flex; */
+            /* flex-direction: column; */
+            /* height: 400px; */
+        }
+
+        .lain .up {
+            width: 100%;
+            display: flex;
+            height: 400px;
+            justify-content: space-between;
+
+        }
+
+        .lain .up .china {
+            width: 48%;
+            height: 400px;
+            background: url(https://demo.phlox.pro/travel/wp-content/uploads/sites/132/2020/03/theodor-lundqvist-WHhbYArwFt8-unsplash@2x.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 30px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+        }
+
+        .lain .up .maldiv {
+            width: 48%;
+            height: 400px;
+            background: url(https://demo.phlox.pro/travel/wp-content/uploads/sites/132/2020/03/ahmed-raavi-MqIRZVuk7Uo-unsplash@2x.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 30px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .data {
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            padding: 40px;
+        }
+
+        .data h3 {
+            font-size: 80px;
+            text-transform: capitalize;
+            text-shadow: 3px 3px 10px black;
+        }
+
+        .data p {
+            font-size: 25px;
+        }
+
+        .lain .dn {
+            width: 100%;
+            display: flex;
+            height: 500px;
+            padding-top: 20px;
+            justify-content: space-between;
+
+        }
+
+       .lain .dn .italy {
+            width: 32%;
+            height: 400px;
+            background: url(https://demo.phlox.pro/travel/wp-content/uploads/sites/132/2020/03/mathew-schwartz-s87bBFZviAU-unsplash@2x.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 30px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .russia {
+            width: 32%;
+            height: 400px;
+            background: linear-gradient(to right bottom,rgba(0, 0, 0, 0.708),transparent),url(https://demo.phlox.pro/travel/wp-content/uploads/sites/132/2020/03/nikolay-vorobyev-jaH3QF46gAY-unsplash@2x-1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 30px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .brazil {
+            width: 32%;
+            height: 400px;
+            background: url(https://demo.phlox.pro/travel/wp-content/uploads/sites/132/2020/03/agustin-diaz-7F65HDP0-E0-unsplash@2x.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 30px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .box {
+            width: 100%;
+            background: url(https://demo.phlox.pro/travel/wp-content/uploads/sites/132/2019/10/Mask-Group-222x-1.jpg);
+            height: 90vh;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+        }
+
+        .new{
+            width: 100%;
+            height: 50vh;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <div class="logo">
+                <img src="https://demo.phlox.pro/travel/wp-content/uploads/sites/132/2019/10/logo-dark.svg" alt="">
+            </div>
+            <nav>
+                <a href="">pakage </a>
+                <a href="">conyavy </a>
+                <a href=""> contact us </a>
+                <a href=""> about us </a>
+            </nav>
+        </header>
+        <div class="pra">
+            <h5>NEVER STOP <br>
+                EXPLORING</h5>
+        </div>
+        <div class="chek">
+            <h6>
+                Chek our best pramotion
+            </h6>
+
+        </div>
+
+    </div>
+    <div class="praposal">
+        <h3>Our praposal</h3>
+    </div>
+    <div class="popular">
+        <h3>Popular destination</h3>
+    </div>
+
+
+
+    <div class="cont">
+        <div class="lain">
+            <!-- up -->
+            <div class="up">
+                <div class="china">
+                    <div class="data">
+
+                        <h3>China</h3>
+                        <p>9 pakage</p>
+                    </div>
+                </div>
+                <div class="maldiv">
+                    <div class="data">
+
+                        <h3>Maldiv</h3>
+                        <p>8 pakage</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- up -->
+            <!-- down -->
+            <div class="dn">
+                <div class="italy">
+                    <div class="data">
+
+                        <h3>italy</h3>
+                        <p>9 pakage</p>
+                    </div>
+                </div>
+                <div class="russia">
+                    <div class="data">
+                        <h3>russia</h3>
+                        <p>9 pakage</p>
+                    </div>
+                </div>
+                <div class="brazil">
+                    <div class="data">
+
+                        <h3>brazil</h3>
+                        <p>9 pakage</p>
+                    </div>
+                </div>
+            </div>
+            <!-- down -->
+        </div>
+    </div>
+
+
+
+    <div class="new">
+
+    </div>
+
+
+
+    
+</body>
+
+</html>
